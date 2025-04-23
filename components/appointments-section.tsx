@@ -77,7 +77,6 @@ export default function AppointmentsSection({ userId }: { userId: string }) {
           pricePerHour: data.pricePerHour,
         };
 
-        // Convert Firestore timestamp to JS Date for comparison
         const appointmentDate = data.date.toDate();
         const now = new Date();
 

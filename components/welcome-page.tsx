@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 // MUI imports
 import {
@@ -30,6 +31,12 @@ import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
 import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
 import PlaceIcon from "@mui/icons-material/Place";
 import CallIcon from "@mui/icons-material/Call";
+
+//imgs
+import bowl from "@/img/bowl.png";
+import logo from "@/img/logo2.png";
+
+//login page
 
 // TypeScript interfaces
 interface NavLinkProps {
@@ -121,12 +128,7 @@ const NavBar: React.FC = () => {
             width: "auto",
           }}
         >
-          <Image
-            src="/img/logo2.png"
-            alt="NutriPro Logo"
-            width={50}
-            height={50}
-          />
+          <Image src={logo} alt="NutriPro Logo" width={50} height={50} />
           <Typography
             sx={{
               color: "#366e47",
@@ -393,6 +395,8 @@ const WelcomePage: React.FC = () => {
     };
   }, []);
 
+  const router = useRouter();
+
   return (
     <Sheet id="home" sx={{ maxWidth: "1500px", overflowX: "hidden" }}>
       <NavBar />
@@ -455,7 +459,12 @@ const WelcomePage: React.FC = () => {
               <Button
                 size="lg"
                 style={{ maxWidth: "200px", background: "#408001" }}
-                endDecorator={<ArrowForward fontSize="medium" />}
+                endDecorator={
+                  <ArrowForward
+                    fontSize="medium"
+                    // onclick={() => router.push("/login")}
+                  />
+                }
               >
                 Get Started
               </Button>
@@ -521,7 +530,7 @@ const WelcomePage: React.FC = () => {
           }}
         >
           <Image
-            src="/img/bowl.png"
+            src={bowl}
             alt="Food bowl"
             width={320}
             height={320}

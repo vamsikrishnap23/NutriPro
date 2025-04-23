@@ -11,6 +11,8 @@ import AppointmentsSection from "@/components/appointments-section";
 import UserProfileSection from "@/components/user-profile-section";
 import { LogOut } from "lucide-react";
 
+import logoimg from "@/img/logo2.png";
+
 //changes
 import { getFirebaseAuth } from "../../my-app/lib/firebase";
 
@@ -66,11 +68,12 @@ export default function MainPage() {
 
           <div className="flex items-center gap-4">
             <Avatar>
-              <AvatarImage src="" />
+              <AvatarImage src={logoimg} />
               <AvatarFallback>logo</AvatarFallback>
             </Avatar>
 
-            <h1 className="text-2xl font-bold">Nutritionist</h1>
+            <h1 className="text-2xl font-bold text-[#408001
+            ]">NutriPro</h1>
           </div>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
@@ -112,7 +115,7 @@ export default function MainPage() {
             <AppointmentsSection userId={user.uid} />
           </TabsContent>
           <TabsContent value="profile" className="space-y-4">
-            <UserProfileSection user={user} />
+            {/* <UserProfileSection user={user} /> */}
           </TabsContent>
         </Tabs>
       </main>

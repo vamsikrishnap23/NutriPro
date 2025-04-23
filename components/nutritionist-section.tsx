@@ -53,7 +53,7 @@ const nutritionists = [
     name: "Dr. Vamsi Krishna",
     specialty: "Weight Management",
     experience: 8,
-    pricePerHour: 85,
+    pricePerHour: 2000,
     rating: 4.8,
     image: "../img/doc.png",
     bio: "Dr. Vamsi Krishna is a certified nutritionist with 8 years of experience in weight management. He has guided numerous clients in achieving sustainable weight loss and metabolic health through customized diet plans.",
@@ -66,7 +66,7 @@ const nutritionists = [
     name: "Harshil R",
     specialty: "Sports Nutrition",
     experience: 6,
-    pricePerHour: 75,
+    pricePerHour: 2500,
     rating: 4.6,
     image: "/placeholder.svg?height=200&width=200",
     bio: "Harshil R is a sports nutrition expert who works with athletes to enhance performance and recovery through science-backed dietary strategies. His meal plans are designed to optimize energy and endurance.",
@@ -79,7 +79,7 @@ const nutritionists = [
     name: "Dr. Praveen",
     specialty: "Digestive Health",
     experience: 10,
-    pricePerHour: 90,
+    pricePerHour: 1800,
     rating: 4.9,
     image: "/placeholder.svg?height=200&width=200",
     bio: "Dr. Praveen specializes in gut health and digestive disorders. With a decade of experience, he helps patients manage conditions like IBS, acidity, and food intolerances through tailored nutrition plans.",
@@ -92,7 +92,7 @@ const nutritionists = [
     name: "Sathwik",
     specialty: "Plant-Based Nutrition",
     experience: 5,
-    pricePerHour: 70,
+    pricePerHour: 1760,
     rating: 4.5,
     image: "/placeholder.svg?height=200&width=200",
     bio: "Sathwik is a dedicated advocate of plant-based diets. He helps clients transition to a vegetarian or vegan lifestyle while ensuring they meet all essential nutrient requirements.",
@@ -104,7 +104,7 @@ const nutritionists = [
     name: "Rohith",
     specialty: "Clinical Nutrition",
     experience: 7,
-    pricePerHour: 80,
+    pricePerHour: 1750,
     rating: 4.7,
     image: "/placeholder.svg?height=200&width=200",
     bio: "Rohith specializes in clinical nutrition, working with patients managing chronic conditions like diabetes, hypertension, and heart disease. He focuses on medical nutrition therapy for better health outcomes.",
@@ -193,7 +193,7 @@ export default function NutritionistSection() {
                   </CardDescription>
                 </div>
                 <Badge variant="outline" className="flex items-center gap-1">
-                  <Star className="h-3 w-3 fill-primary text-primary" />
+                  <Star className="h-3 w-3 fill-[#408001] text-primary " />
                   {nutritionist.rating}
                 </Badge>
               </div>
@@ -216,7 +216,7 @@ export default function NutritionistSection() {
               <Dialog>
                 <DialogTrigger asChild>
                   <Button
-                    className="w-full"
+                    className="w-full bg-[#408001]"
                     onClick={() => {
                       setSelectedNutritionist(nutritionist);
                       resetBookingState();
@@ -237,7 +237,7 @@ export default function NutritionistSection() {
                             variant="outline"
                             className="flex items-center gap-1"
                           >
-                            <Star className="h-3 w-3 fill-primary text-primary" />
+                            <Star className="h-3 w-3 fill-[#408001] text-[#408001]" />
                             {selectedNutritionist.rating}
                           </Badge>
                           <span>{selectedNutritionist.specialty}</span>
@@ -386,7 +386,7 @@ export default function NutritionistSection() {
                           <DialogFooter className="mt-4">
                             <Button
                               onClick={handleBookAppointment}
-                              className="w-full"
+                              className="w-full bg-[#408001]"
                             >
                               Book Appointment
                             </Button>
